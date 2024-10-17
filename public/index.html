@@ -14,8 +14,10 @@
             <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            <button type="button" onclick="submitLogin()">Login</button>
-            <button type="button" onclick="call_REST_API_Hello()">Hello</button>
+            <div class="button-container">
+                <button type="button" onclick="submitLogin()">Login</button>
+                <button type="button" onclick="call_REST_API_Hello()">Hello</button>
+            </div>
         </form>
         <div id="popup" class="popup">
             <div class="popup-content">
