@@ -17,7 +17,12 @@
             <button type="button" onclick="submitLogin()">Login</button>
             <button type="button" onclick="call_REST_API_Hello()">Hello</button>
         </form>
-        <p id="message"></p>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div id="infoContainer"></div>
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
