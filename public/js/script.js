@@ -12,8 +12,17 @@ function submitLogin() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('message').innerText = data.message;
         
+        const infoContainer = document.getElementById("infoContainer");
+        infoContainer.innerHTML = ""; // ล้างข้อมูลก่อนหน้า
+        
+        for (const key in data) {
+            const p = document.createElement("p");
+            p.id = key; // ตั้งค่า id ตาม key
+            p.innerText = `${key}: ${data[key]}`; // ตั้งค่าเนื้อหาเป็นค่าใน data
+            infoContainer.appendChild(p); // เพิ่ม <p> ลงใน container
+        }
+
         // เปิดป็อปอัพ
         openPopup();
     })
