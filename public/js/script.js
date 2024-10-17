@@ -2,13 +2,13 @@ function submitLogin() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    fetch('https://', {
+    fetch('https://restapi.tu.ac.th/api/v1/auth/Ad/verify2', {
         method: 'POST',
         headers: {
-            'Content-Type': '',
-            'Application-Key': ''
+            'Content-Type': 'application/json',
+            'Application-Key': 'TU264f44b43d77af936daf5de80a472a601ef11a11ea917586b51bc287990d5fc226ec81a9df38a7a225eaa1c70e65c5b6'
         },
-        body: JSON.stringify({ UserName: "username",PassWord: "password" })
+        body: JSON.stringify({ "UserName": username, "PassWord": password })
     })
     .then(response => response.json())
     .then(data => {
