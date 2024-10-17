@@ -13,6 +13,9 @@ function submitLogin() {
     .then(response => response.json())
     .then(data => {
         document.getElementById('message').innerText = data.message;
+        
+        // เปิดป็อปอัพ
+        openPopup();
     })
     .catch(error => console.error('Error:', error));
 }
@@ -34,4 +37,12 @@ function call_REST_API_Hello() {
         document.getElementById('message').innerText = text;
     })
     .catch(error => console.error('Error:', error));
+}
+
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
 }
