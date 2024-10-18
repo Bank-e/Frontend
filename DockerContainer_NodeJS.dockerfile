@@ -23,7 +23,7 @@ COPY package*.json ./
 RUN npm install --production
 
 # Step 3: Copy the rest of the application code to the container
-COPY FrontEnd/. .
+COPY Frontend/. .
 # Expose the port that your Node.js app runs on
 EXPOSE 3000
 
